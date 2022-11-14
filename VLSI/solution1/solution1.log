@@ -1,0 +1,279 @@
+==============================================================
+File generated on Thu Nov 10 23:11:47 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Thu Nov 10 23:12:30 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'hand_chrc_nn.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 108.945 ; gain = 24.160
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 108.945 ; gain = 24.160
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:35 ; elapsed = 00:01:48 . Memory (MB): peak = 184.539 ; gain = 99.754
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'std::exp' into 'hand_chrc_nn' (hand_chrc_nn.cpp:39) automatically.
+ERROR: [SYNCHK 200-61] hand_chrc_nn.cpp:37: unsupported memory access on variable 'X' which is (or contains) an array with unknown size at compile time.
+ERROR: [SYNCHK 200-71] hand_chrc_nn.cpp:68: function 'std::allocator<char>::allocator()' has no function body.
+ERROR: [SYNCHK 200-71] hand_chrc_nn.cpp:68: function 'std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' has no function body.
+ERROR: [SYNCHK 200-71] hand_chrc_nn.cpp:68: function 'std::allocator<char>::~allocator()' has no function body.
+ERROR: [SYNCHK 200-71] hand_chrc_nn.cpp:70: function 'std::string::operator[](unsigned long long)' has no function body.
+ERROR: [SYNCHK 200-71] hand_chrc_nn.cpp:71: function 'std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' has no function body.
+INFO: [SYNCHK 200-10] 6 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+File generated on Thu Nov 10 23:17:59 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Thu Nov 10 23:19:08 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'hand_chrc_nn.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 108.984 ; gain = 23.656
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 108.984 ; gain = 23.656
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:34 ; elapsed = 00:01:54 . Memory (MB): peak = 181.738 ; gain = 96.410
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:34 ; elapsed = 00:01:54 . Memory (MB): peak = 181.738 ; gain = 96.410
+INFO: [XFORM 203-102] Partitioning array 'bias22' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'bias1' in dimension 2 automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:35 ; elapsed = 00:01:55 . Memory (MB): peak = 196.789 ; gain = 111.461
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:01:56 . Memory (MB): peak = 196.789 ; gain = 111.461
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hand_chrc_nn' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hand_chrc_nn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 115.852 seconds; current allocated memory: 114.370 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.258 seconds; current allocated memory: 115.390 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hand_chrc_nn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'hand_chrc_nn/X' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hand_chrc_nn/y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hand_chrc_nn' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'hand_mulchrc_nn_float_s' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_hand_mulchrc_nn_float_s' to 'hand_chrc_nn_handbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_bias1_0' to 'hand_chrc_nn_biascud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fadd_32ns_32ns_32_5_full_dsp_1' to 'hand_chrc_nn_fadddEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fmul_32ns_32ns_32_4_max_dsp_1' to 'hand_chrc_nn_fmuleOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fptrunc_64ns_32_1_1' to 'hand_chrc_nn_fptrfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fpext_32ns_64_1_1' to 'hand_chrc_nn_fpexg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fcmp_32ns_32ns_1_1_1' to 'hand_chrc_nn_fcmphbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_dadd_64ns_64ns_64_6_full_dsp_1' to 'hand_chrc_nn_daddibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_ddiv_64ns_64ns_64_31_1' to 'hand_chrc_nn_ddivjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_dexp_64ns_64ns_64_18_full_dsp_1' to 'hand_chrc_nn_dexpkbM' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'hand_chrc_nn/X_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hand_chrc_nn/X_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_daddibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_ddivjbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_dexpkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fadddEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fcmphbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fmuleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fpexg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fptrfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hand_chrc_nn'.
+INFO: [HLS 200-111]  Elapsed time: 0.605 seconds; current allocated memory: 117.334 MB.
+INFO: [RTMG 210-279] Implementing memory 'hand_chrc_nn_handbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'hand_chrc_nn_biascud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'hand_chrc_nn_lay21_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'hand_chrc_nn_lay1_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hand_chrc_nn_h1_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:44 ; elapsed = 00:02:08 . Memory (MB): peak = 240.297 ; gain = 154.969
+INFO: [SYSC 207-301] Generating SystemC RTL for hand_chrc_nn.
+INFO: [VHDL 208-304] Generating VHDL RTL for hand_chrc_nn.
+INFO: [VLOG 209-307] Generating Verilog RTL for hand_chrc_nn.
+INFO: [HLS 200-112] Total elapsed time: 127.99 seconds; peak allocated memory: 119.043 MB.
+==============================================================
+File generated on Fri Nov 11 02:08:47 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+File generated on Sat Nov 12 22:57:43 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+File generated on Sun Nov 13 00:58:55 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Sun Nov 13 00:59:26 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Sun Nov 13 19:19:21 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Sun Nov 13 19:19:56 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Sun Nov 13 22:56:37 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'hand_chrc_nn.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 109.738 ; gain = 25.383
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 109.738 ; gain = 25.383
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:31 ; elapsed = 00:01:51 . Memory (MB): peak = 181.867 ; gain = 97.512
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:31 ; elapsed = 00:01:51 . Memory (MB): peak = 181.867 ; gain = 97.512
+INFO: [XFORM 203-102] Partitioning array 'bias22' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'bias1' in dimension 2 automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:32 ; elapsed = 00:01:51 . Memory (MB): peak = 196.629 ; gain = 112.273
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:32 ; elapsed = 00:01:52 . Memory (MB): peak = 196.629 ; gain = 112.273
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hand_chrc_nn' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hand_chrc_nn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 112.143 seconds; current allocated memory: 114.371 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 115.390 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hand_chrc_nn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'hand_chrc_nn/X' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hand_chrc_nn/y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hand_chrc_nn' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'hand_mulchrc_nn_float_s' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_hand_mulchrc_nn_float_s' to 'hand_chrc_nn_handbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_bias1_0' to 'hand_chrc_nn_biascud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fadd_32ns_32ns_32_5_full_dsp_1' to 'hand_chrc_nn_fadddEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fmul_32ns_32ns_32_4_max_dsp_1' to 'hand_chrc_nn_fmuleOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fptrunc_64ns_32_1_1' to 'hand_chrc_nn_fptrfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fpext_32ns_64_1_1' to 'hand_chrc_nn_fpexg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_fcmp_32ns_32ns_1_1_1' to 'hand_chrc_nn_fcmphbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_dadd_64ns_64ns_64_6_full_dsp_1' to 'hand_chrc_nn_daddibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_ddiv_64ns_64ns_64_31_1' to 'hand_chrc_nn_ddivjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hand_chrc_nn_dexp_64ns_64ns_64_18_full_dsp_1' to 'hand_chrc_nn_dexpkbM' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'hand_chrc_nn/X_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hand_chrc_nn/X_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_daddibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_ddivjbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_dexpkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fadddEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fcmphbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fmuleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fpexg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hand_chrc_nn_fptrfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hand_chrc_nn'.
+INFO: [HLS 200-111]  Elapsed time: 0.586 seconds; current allocated memory: 117.335 MB.
+INFO: [RTMG 210-279] Implementing memory 'hand_chrc_nn_handbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'hand_chrc_nn_biascud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'hand_chrc_nn_lay21_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'hand_chrc_nn_lay1_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hand_chrc_nn_h1_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:40 ; elapsed = 00:02:03 . Memory (MB): peak = 240.664 ; gain = 156.309
+INFO: [SYSC 207-301] Generating SystemC RTL for hand_chrc_nn.
+INFO: [VHDL 208-304] Generating VHDL RTL for hand_chrc_nn.
+INFO: [VLOG 209-307] Generating Verilog RTL for hand_chrc_nn.
+INFO: [HLS 200-112] Total elapsed time: 123.211 seconds; peak allocated memory: 119.082 MB.
+==============================================================
+File generated on Sun Nov 13 23:41:43 +0530 2022
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================

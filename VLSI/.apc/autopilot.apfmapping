@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hand_chrc_nn.cpp" path="C:\Users\91917\Downloads\VLSI_Project\vlsi_project\hand_chrc_nn.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Users\91917\Downloads\VLSI_Project\vlsi_project\test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

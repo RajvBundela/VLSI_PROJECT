@@ -1,0 +1,1733 @@
+
+
+================================================================
+== Vivado HLS Report for 'hand_chrc_nn'
+================================================================
+* Date:           Sun Nov 13 22:58:29 2022
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        VLSI
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.451|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1134163|  1134163|  1134163|  1134163|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+--------+--------+----------+-----------+-----------+------+----------+
+        |                |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- memcpy_lay1   |  156899|  156899|      1569|          -|          -|   100|    no    |
+        | + memcpy_lay1  |    1567|    1567|         2|          -|          -|   784|    no    |
+        |- Loop 2        |     200|     200|         2|          -|          -|   100|    no    |
+        |- Loop 3        |  946900|  946900|      9469|          -|          -|   100|    no    |
+        | + Loop 3.1     |    9408|    9408|        12|          -|          -|   784|    no    |
+        |- Loop 4        |   30160|   30160|      1160|          -|          -|    26|    no    |
+        | + Loop 4.1     |    1100|    1100|        11|          -|          -|   100|    no    |
+        +----------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 148
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	3  / (!tmp_2)
+	2  / (tmp_2 & !tmp_3)
+	5  / (tmp_2 & tmp_3)
+5 --> 
+	6  / (!exitcond5)
+	7  / (exitcond5)
+6 --> 
+	5  / true
+7 --> 
+	8  / (!exitcond4)
+	79  / (exitcond4)
+8 --> 
+	9  / (!exitcond3)
+	20  / (exitcond3)
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	8  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	7  / true
+79 --> 
+	80  / (!exitcond1)
+80 --> 
+	81  / (!exitcond)
+	91  / (exitcond)
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	80  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	79  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([784 x float]* %X) nounwind, !map !7"   --->   Operation 149 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %y) nounwind, !map !13"   --->   Operation 150 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 0) nounwind, !map !19"   --->   Operation 151 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @hand_chrc_nn_str) nounwind"   --->   Operation 152 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%lay1 = alloca [78400 x float], align 4" [hand_chrc_nn.cpp:18]   --->   Operation 153 'alloca' 'lay1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%h1 = alloca [100 x float], align 16" [hand_chrc_nn.cpp:24]   --->   Operation 154 'alloca' 'h1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [hand_chrc_nn.cpp:14]   --->   Operation 155 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %y, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [hand_chrc_nn.cpp:15]   --->   Operation 156 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([784 x float]* %X, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [hand_chrc_nn.cpp:16]   --->   Operation 157 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (1.66ns)   --->   "br label %meminst"   --->   Operation 158 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.18>
+ST_2 : Operation 159 [1/1] (0.00ns)   --->   "%invdar = phi i7 [ 0, %0 ], [ %indvarinc, %meminst9 ]" [hand_chrc_nn.cpp:18]   --->   Operation 159 'phi' 'invdar' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "%phi_mul = phi i17 [ 0, %0 ], [ %next_mul, %meminst9 ]"   --->   Operation 160 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 161 [1/1] (2.18ns)   --->   "%next_mul = add i17 %phi_mul, 784"   --->   Operation 161 'add' 'next_mul' <Predicate = true> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 162 [1/1] (2.03ns)   --->   "%indvarinc = add i7 %invdar, 1" [hand_chrc_nn.cpp:18]   --->   Operation 162 'add' 'indvarinc' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 163 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind"   --->   Operation 163 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 164 [1/1] (1.66ns)   --->   "br label %meminst10"   --->   Operation 164 'br' <Predicate = true> <Delay = 1.66>
+
+State 3 <SV = 2> <Delay = 5.43>
+ST_3 : Operation 165 [1/1] (0.00ns)   --->   "%invdar1 = phi i10 [ 0, %meminst ], [ %indvarinc1, %meminst10 ]" [hand_chrc_nn.cpp:18]   --->   Operation 165 'phi' 'invdar1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 166 [1/1] (2.12ns)   --->   "%indvarinc1 = add i10 %invdar1, 1" [hand_chrc_nn.cpp:18]   --->   Operation 166 'add' 'indvarinc1' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i10 %invdar1 to i17" [hand_chrc_nn.cpp:18]   --->   Operation 167 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 168 [1/1] (2.18ns)   --->   "%tmp_1 = add i17 %phi_mul, %tmp_1_cast" [hand_chrc_nn.cpp:18]   --->   Operation 168 'add' 'tmp_1' <Predicate = true> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_36_cast = zext i17 %tmp_1 to i64" [hand_chrc_nn.cpp:18]   --->   Operation 169 'zext' 'tmp_36_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 170 [1/1] (0.00ns)   --->   "%hand_chrc_nn_float_1 = getelementptr [78400 x float]* @hand_mulchrc_nn_float_s, i64 0, i64 %tmp_36_cast" [hand_chrc_nn.cpp:18]   --->   Operation 170 'getelementptr' 'hand_chrc_nn_float_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 171 [2/2] (3.25ns)   --->   "%hand_chrc_nn_float_2 = load float* %hand_chrc_nn_float_1, align 4" [hand_chrc_nn.cpp:18]   --->   Operation 171 'load' 'hand_chrc_nn_float_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2600> <ROM>
+ST_3 : Operation 172 [1/1] (1.70ns)   --->   "%tmp_2 = icmp eq i10 %invdar1, -241" [hand_chrc_nn.cpp:18]   --->   Operation 172 'icmp' 'tmp_2' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.51>
+ST_4 : Operation 173 [1/1] (0.00ns)   --->   "%lay1_addr = getelementptr [78400 x float]* %lay1, i64 0, i64 %tmp_36_cast" [hand_chrc_nn.cpp:18]   --->   Operation 173 'getelementptr' 'lay1_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 174 [1/2] (3.25ns)   --->   "%hand_chrc_nn_float_2 = load float* %hand_chrc_nn_float_1, align 4" [hand_chrc_nn.cpp:18]   --->   Operation 174 'load' 'hand_chrc_nn_float_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2600> <ROM>
+ST_4 : Operation 175 [1/1] (3.25ns)   --->   "store float %hand_chrc_nn_float_2, float* %lay1_addr, align 4" [hand_chrc_nn.cpp:18]   --->   Operation 175 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_4 : Operation 176 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecLoopName([12 x i8]* @memcpy_lay1_str) nounwind"   --->   Operation 176 'specloopname' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 177 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784) nounwind"   --->   Operation 177 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 178 [1/1] (0.00ns)   --->   "br i1 %tmp_2, label %meminst9, label %meminst10" [hand_chrc_nn.cpp:18]   --->   Operation 178 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 179 [1/1] (1.46ns)   --->   "%tmp_3 = icmp eq i7 %invdar, -29" [hand_chrc_nn.cpp:18]   --->   Operation 179 'icmp' 'tmp_3' <Predicate = (tmp_2)> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 180 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopName([12 x i8]* @memcpy_lay1_str) nounwind"   --->   Operation 180 'specloopname' 'empty_7' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_4 : Operation 181 [1/1] (0.00ns)   --->   "br i1 %tmp_3, label %.preheader7892.preheader, label %meminst" [hand_chrc_nn.cpp:18]   --->   Operation 181 'br' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_4 : Operation 182 [1/1] (1.66ns)   --->   "br label %.preheader7892" [hand_chrc_nn.cpp:26]   --->   Operation 182 'br' <Predicate = (tmp_2 & tmp_3)> <Delay = 1.66>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 183 [1/1] (0.00ns)   --->   "%i1 = phi i7 [ %i, %1 ], [ 0, %.preheader7892.preheader ]"   --->   Operation 183 'phi' 'i1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 184 [1/1] (1.46ns)   --->   "%exitcond5 = icmp eq i7 %i1, -28" [hand_chrc_nn.cpp:26]   --->   Operation 184 'icmp' 'exitcond5' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 185 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind"   --->   Operation 185 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 186 [1/1] (2.03ns)   --->   "%i = add i7 %i1, 1" [hand_chrc_nn.cpp:26]   --->   Operation 186 'add' 'i' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 187 [1/1] (0.00ns)   --->   "br i1 %exitcond5, label %.preheader8.preheader, label %1" [hand_chrc_nn.cpp:26]   --->   Operation 187 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 188 [1/1] (0.00ns)   --->   "%tmp_4 = zext i7 %i1 to i64" [hand_chrc_nn.cpp:28]   --->   Operation 188 'zext' 'tmp_4' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 189 [1/1] (0.00ns)   --->   "%bias1_0_addr = getelementptr [100 x float]* @bias1_0, i64 0, i64 %tmp_4" [hand_chrc_nn.cpp:28]   --->   Operation 189 'getelementptr' 'bias1_0_addr' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_5 : Operation 190 [2/2] (3.25ns)   --->   "%bias1_0_load = load float* %bias1_0_addr, align 4" [hand_chrc_nn.cpp:28]   --->   Operation 190 'load' 'bias1_0_load' <Predicate = (!exitcond5)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2600> <ROM>
+ST_5 : Operation 191 [1/1] (1.66ns)   --->   "br label %.preheader8"   --->   Operation 191 'br' <Predicate = (exitcond5)> <Delay = 1.66>
+
+State 6 <SV = 5> <Delay = 6.51>
+ST_6 : Operation 192 [1/2] (3.25ns)   --->   "%bias1_0_load = load float* %bias1_0_addr, align 4" [hand_chrc_nn.cpp:28]   --->   Operation 192 'load' 'bias1_0_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2600> <ROM>
+ST_6 : Operation 193 [1/1] (0.00ns)   --->   "%h1_addr = getelementptr inbounds [100 x float]* %h1, i64 0, i64 %tmp_4" [hand_chrc_nn.cpp:28]   --->   Operation 193 'getelementptr' 'h1_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 194 [1/1] (3.25ns)   --->   "store float %bias1_0_load, float* %h1_addr, align 4" [hand_chrc_nn.cpp:28]   --->   Operation 194 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_6 : Operation 195 [1/1] (0.00ns)   --->   "br label %.preheader7892" [hand_chrc_nn.cpp:26]   --->   Operation 195 'br' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 5> <Delay = 2.18>
+ST_7 : Operation 196 [1/1] (0.00ns)   --->   "%i2 = phi i7 [ %i_1, %3 ], [ 0, %.preheader8.preheader ]"   --->   Operation 196 'phi' 'i2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 197 [1/1] (0.00ns)   --->   "%phi_mul1 = phi i17 [ %next_mul2, %3 ], [ 0, %.preheader8.preheader ]"   --->   Operation 197 'phi' 'phi_mul1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 198 [1/1] (2.18ns)   --->   "%next_mul2 = add i17 %phi_mul1, 784"   --->   Operation 198 'add' 'next_mul2' <Predicate = true> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 199 [1/1] (1.46ns)   --->   "%exitcond4 = icmp eq i7 %i2, -28" [hand_chrc_nn.cpp:33]   --->   Operation 199 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 200 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind"   --->   Operation 200 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 201 [1/1] (2.03ns)   --->   "%i_1 = add i7 %i2, 1" [hand_chrc_nn.cpp:33]   --->   Operation 201 'add' 'i_1' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 202 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %.preheader.preheader, label %.preheader7.preheader" [hand_chrc_nn.cpp:33]   --->   Operation 202 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 203 [1/1] (0.00ns)   --->   "%tmp_6 = zext i7 %i2 to i64" [hand_chrc_nn.cpp:37]   --->   Operation 203 'zext' 'tmp_6' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_7 : Operation 204 [1/1] (0.00ns)   --->   "%h1_addr_1 = getelementptr inbounds [100 x float]* %h1, i64 0, i64 %tmp_6" [hand_chrc_nn.cpp:37]   --->   Operation 204 'getelementptr' 'h1_addr_1' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_7 : Operation 205 [1/1] (1.66ns)   --->   "br label %.preheader7" [hand_chrc_nn.cpp:35]   --->   Operation 205 'br' <Predicate = (!exitcond4)> <Delay = 1.66>
+ST_7 : Operation 206 [1/1] (1.66ns)   --->   "br label %.preheader"   --->   Operation 206 'br' <Predicate = (exitcond4)> <Delay = 1.66>
+
+State 8 <SV = 6> <Delay = 5.43>
+ST_8 : Operation 207 [1/1] (0.00ns)   --->   "%j = phi i10 [ %j_2, %2 ], [ 0, %.preheader7.preheader ]"   --->   Operation 207 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 208 [1/1] (1.70ns)   --->   "%exitcond3 = icmp eq i10 %j, -240" [hand_chrc_nn.cpp:35]   --->   Operation 208 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 209 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784) nounwind"   --->   Operation 209 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 210 [1/1] (2.12ns)   --->   "%j_2 = add i10 %j, 1" [hand_chrc_nn.cpp:35]   --->   Operation 210 'add' 'j_2' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 211 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %3, label %2" [hand_chrc_nn.cpp:35]   --->   Operation 211 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 212 [1/1] (0.00ns)   --->   "%tmp_11 = zext i10 %j to i64" [hand_chrc_nn.cpp:37]   --->   Operation 212 'zext' 'tmp_11' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_8 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_11_cast = zext i10 %j to i17" [hand_chrc_nn.cpp:37]   --->   Operation 213 'zext' 'tmp_11_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_8 : Operation 214 [1/1] (2.18ns)   --->   "%tmp_15 = add i17 %phi_mul1, %tmp_11_cast" [hand_chrc_nn.cpp:37]   --->   Operation 214 'add' 'tmp_15' <Predicate = (!exitcond3)> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 215 [1/1] (0.00ns)   --->   "%tmp_39_cast = zext i17 %tmp_15 to i64" [hand_chrc_nn.cpp:37]   --->   Operation 215 'zext' 'tmp_39_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_8 : Operation 216 [1/1] (0.00ns)   --->   "%lay1_addr_1 = getelementptr [78400 x float]* %lay1, i64 0, i64 %tmp_39_cast" [hand_chrc_nn.cpp:37]   --->   Operation 216 'getelementptr' 'lay1_addr_1' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_8 : Operation 217 [1/1] (0.00ns)   --->   "%X_addr = getelementptr [784 x float]* %X, i64 0, i64 %tmp_11" [hand_chrc_nn.cpp:37]   --->   Operation 217 'getelementptr' 'X_addr' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_8 : Operation 218 [2/2] (3.25ns)   --->   "%X_load = load float* %X_addr, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 218 'load' 'X_load' <Predicate = (!exitcond3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_8 : Operation 219 [2/2] (3.25ns)   --->   "%lay1_load = load float* %lay1_addr_1, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 219 'load' 'lay1_load' <Predicate = (!exitcond3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_8 : Operation 220 [2/2] (3.25ns)   --->   "%h1_load = load float* %h1_addr_1, align 4" [hand_chrc_nn.cpp:39]   --->   Operation 220 'load' 'h1_load' <Predicate = (exitcond3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+
+State 9 <SV = 7> <Delay = 3.25>
+ST_9 : Operation 221 [1/2] (3.25ns)   --->   "%X_load = load float* %X_addr, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 221 'load' 'X_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_9 : Operation 222 [1/2] (3.25ns)   --->   "%lay1_load = load float* %lay1_addr_1, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 222 'load' 'lay1_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+
+State 10 <SV = 8> <Delay = 5.64>
+ST_10 : Operation 223 [4/4] (5.64ns)   --->   "%tmp_12 = fmul float %X_load, %lay1_load" [hand_chrc_nn.cpp:37]   --->   Operation 223 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 9> <Delay = 5.64>
+ST_11 : Operation 224 [3/4] (5.64ns)   --->   "%tmp_12 = fmul float %X_load, %lay1_load" [hand_chrc_nn.cpp:37]   --->   Operation 224 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 10> <Delay = 5.64>
+ST_12 : Operation 225 [2/4] (5.64ns)   --->   "%tmp_12 = fmul float %X_load, %lay1_load" [hand_chrc_nn.cpp:37]   --->   Operation 225 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 226 [2/2] (3.25ns)   --->   "%h1_load_1 = load float* %h1_addr_1, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 226 'load' 'h1_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+
+State 13 <SV = 11> <Delay = 5.64>
+ST_13 : Operation 227 [1/4] (5.64ns)   --->   "%tmp_12 = fmul float %X_load, %lay1_load" [hand_chrc_nn.cpp:37]   --->   Operation 227 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 228 [1/2] (3.25ns)   --->   "%h1_load_1 = load float* %h1_addr_1, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 228 'load' 'h1_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+
+State 14 <SV = 12> <Delay = 7.17>
+ST_14 : Operation 229 [5/5] (7.17ns)   --->   "%tmp_13 = fadd float %h1_load_1, %tmp_12" [hand_chrc_nn.cpp:37]   --->   Operation 229 'fadd' 'tmp_13' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 13> <Delay = 7.17>
+ST_15 : Operation 230 [4/5] (7.17ns)   --->   "%tmp_13 = fadd float %h1_load_1, %tmp_12" [hand_chrc_nn.cpp:37]   --->   Operation 230 'fadd' 'tmp_13' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 14> <Delay = 7.17>
+ST_16 : Operation 231 [3/5] (7.17ns)   --->   "%tmp_13 = fadd float %h1_load_1, %tmp_12" [hand_chrc_nn.cpp:37]   --->   Operation 231 'fadd' 'tmp_13' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 15> <Delay = 7.17>
+ST_17 : Operation 232 [2/5] (7.17ns)   --->   "%tmp_13 = fadd float %h1_load_1, %tmp_12" [hand_chrc_nn.cpp:37]   --->   Operation 232 'fadd' 'tmp_13' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 16> <Delay = 7.17>
+ST_18 : Operation 233 [1/5] (7.17ns)   --->   "%tmp_13 = fadd float %h1_load_1, %tmp_12" [hand_chrc_nn.cpp:37]   --->   Operation 233 'fadd' 'tmp_13' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 17> <Delay = 3.25>
+ST_19 : Operation 234 [1/1] (3.25ns)   --->   "store float %tmp_13, float* %h1_addr_1, align 4" [hand_chrc_nn.cpp:37]   --->   Operation 234 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_19 : Operation 235 [1/1] (0.00ns)   --->   "br label %.preheader7" [hand_chrc_nn.cpp:35]   --->   Operation 235 'br' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 7> <Delay = 3.25>
+ST_20 : Operation 236 [1/2] (3.25ns)   --->   "%h1_load = load float* %h1_addr_1, align 4" [hand_chrc_nn.cpp:39]   --->   Operation 236 'load' 'h1_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+
+State 21 <SV = 8> <Delay = 6.61>
+ST_21 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_9_to_int = bitcast float %h1_load to i32" [hand_chrc_nn.cpp:39]   --->   Operation 237 'bitcast' 'tmp_9_to_int' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 238 [1/1] (1.26ns)   --->   "%tmp_9_neg = xor i32 %tmp_9_to_int, -2147483648" [hand_chrc_nn.cpp:39]   --->   Operation 238 'xor' 'tmp_9_neg' <Predicate = true> <Delay = 1.26> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_9 = bitcast i32 %tmp_9_neg to float" [hand_chrc_nn.cpp:39]   --->   Operation 239 'bitcast' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 240 [1/1] (5.34ns)   --->   "%tmp_s = fpext float %tmp_9 to double" [hand_chrc_nn.cpp:39]   --->   Operation 240 'fpext' 'tmp_s' <Predicate = true> <Delay = 5.34> <Core = "Float2Double">   --->   Core 113 'Float2Double' <Latency = 0> <II = 1> <Delay = 5.34> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 9> <Delay = 7.32>
+ST_22 : Operation 241 [18/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 241 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 10> <Delay = 7.32>
+ST_23 : Operation 242 [17/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 242 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 11> <Delay = 7.32>
+ST_24 : Operation 243 [16/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 243 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 25 <SV = 12> <Delay = 7.32>
+ST_25 : Operation 244 [15/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 244 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 26 <SV = 13> <Delay = 7.32>
+ST_26 : Operation 245 [14/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 245 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 27 <SV = 14> <Delay = 7.32>
+ST_27 : Operation 246 [13/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 246 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 28 <SV = 15> <Delay = 7.32>
+ST_28 : Operation 247 [12/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 247 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 29 <SV = 16> <Delay = 7.32>
+ST_29 : Operation 248 [11/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 248 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 30 <SV = 17> <Delay = 7.32>
+ST_30 : Operation 249 [10/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 249 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 31 <SV = 18> <Delay = 7.32>
+ST_31 : Operation 250 [9/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 250 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 32 <SV = 19> <Delay = 7.32>
+ST_32 : Operation 251 [8/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 251 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 33 <SV = 20> <Delay = 7.32>
+ST_33 : Operation 252 [7/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 252 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 34 <SV = 21> <Delay = 7.32>
+ST_34 : Operation 253 [6/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 253 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 35 <SV = 22> <Delay = 7.32>
+ST_35 : Operation 254 [5/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 254 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 36 <SV = 23> <Delay = 7.32>
+ST_36 : Operation 255 [4/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 255 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 24> <Delay = 7.32>
+ST_37 : Operation 256 [3/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 256 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 38 <SV = 25> <Delay = 7.32>
+ST_38 : Operation 257 [2/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 257 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 26> <Delay = 7.32>
+ST_39 : Operation 258 [1/18] (7.32ns)   --->   "%tmp_5 = call double @llvm.exp.f64(double %tmp_s)" [hand_chrc_nn.cpp:39]   --->   Operation 258 'dexp' 'tmp_5' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 27> <Delay = 8.37>
+ST_40 : Operation 259 [6/6] (8.37ns)   --->   "%tmp_8 = fadd double %tmp_5, 1.000000e+00" [hand_chrc_nn.cpp:39]   --->   Operation 259 'dadd' 'tmp_8' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 28> <Delay = 8.37>
+ST_41 : Operation 260 [5/6] (8.37ns)   --->   "%tmp_8 = fadd double %tmp_5, 1.000000e+00" [hand_chrc_nn.cpp:39]   --->   Operation 260 'dadd' 'tmp_8' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 29> <Delay = 8.37>
+ST_42 : Operation 261 [4/6] (8.37ns)   --->   "%tmp_8 = fadd double %tmp_5, 1.000000e+00" [hand_chrc_nn.cpp:39]   --->   Operation 261 'dadd' 'tmp_8' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 30> <Delay = 8.37>
+ST_43 : Operation 262 [3/6] (8.37ns)   --->   "%tmp_8 = fadd double %tmp_5, 1.000000e+00" [hand_chrc_nn.cpp:39]   --->   Operation 262 'dadd' 'tmp_8' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 31> <Delay = 8.37>
+ST_44 : Operation 263 [2/6] (8.37ns)   --->   "%tmp_8 = fadd double %tmp_5, 1.000000e+00" [hand_chrc_nn.cpp:39]   --->   Operation 263 'dadd' 'tmp_8' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 32> <Delay = 8.37>
+ST_45 : Operation 264 [1/6] (8.37ns)   --->   "%tmp_8 = fadd double %tmp_5, 1.000000e+00" [hand_chrc_nn.cpp:39]   --->   Operation 264 'dadd' 'tmp_8' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 33> <Delay = 8.45>
+ST_46 : Operation 265 [31/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 265 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 34> <Delay = 8.45>
+ST_47 : Operation 266 [30/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 266 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 35> <Delay = 8.45>
+ST_48 : Operation 267 [29/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 267 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 36> <Delay = 8.45>
+ST_49 : Operation 268 [28/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 268 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 37> <Delay = 8.45>
+ST_50 : Operation 269 [27/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 269 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 38> <Delay = 8.45>
+ST_51 : Operation 270 [26/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 270 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 39> <Delay = 8.45>
+ST_52 : Operation 271 [25/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 271 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 40> <Delay = 8.45>
+ST_53 : Operation 272 [24/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 272 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 41> <Delay = 8.45>
+ST_54 : Operation 273 [23/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 273 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 42> <Delay = 8.45>
+ST_55 : Operation 274 [22/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 274 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 43> <Delay = 8.45>
+ST_56 : Operation 275 [21/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 275 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 44> <Delay = 8.45>
+ST_57 : Operation 276 [20/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 276 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 45> <Delay = 8.45>
+ST_58 : Operation 277 [19/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 277 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 46> <Delay = 8.45>
+ST_59 : Operation 278 [18/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 278 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 47> <Delay = 8.45>
+ST_60 : Operation 279 [17/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 279 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 48> <Delay = 8.45>
+ST_61 : Operation 280 [16/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 280 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 49> <Delay = 8.45>
+ST_62 : Operation 281 [15/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 281 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 50> <Delay = 8.45>
+ST_63 : Operation 282 [14/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 282 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 51> <Delay = 8.45>
+ST_64 : Operation 283 [13/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 283 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 52> <Delay = 8.45>
+ST_65 : Operation 284 [12/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 284 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 53> <Delay = 8.45>
+ST_66 : Operation 285 [11/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 285 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 54> <Delay = 8.45>
+ST_67 : Operation 286 [10/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 286 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 55> <Delay = 8.45>
+ST_68 : Operation 287 [9/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 287 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 56> <Delay = 8.45>
+ST_69 : Operation 288 [8/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 288 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 57> <Delay = 8.45>
+ST_70 : Operation 289 [7/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 289 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 58> <Delay = 8.45>
+ST_71 : Operation 290 [6/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 290 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 59> <Delay = 8.45>
+ST_72 : Operation 291 [5/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 291 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 60> <Delay = 8.45>
+ST_73 : Operation 292 [4/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 292 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 61> <Delay = 8.45>
+ST_74 : Operation 293 [3/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 293 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 62> <Delay = 8.45>
+ST_75 : Operation 294 [2/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 294 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 63> <Delay = 8.45>
+ST_76 : Operation 295 [1/31] (8.45ns)   --->   "%tmp_7 = fdiv double 1.000000e+00, %tmp_8" [hand_chrc_nn.cpp:39]   --->   Operation 295 'ddiv' 'tmp_7' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 64> <Delay = 6.40>
+ST_77 : Operation 296 [1/1] (6.40ns)   --->   "%tmp_10 = fptrunc double %tmp_7 to float" [hand_chrc_nn.cpp:39]   --->   Operation 296 'fptrunc' 'tmp_10' <Predicate = true> <Delay = 6.40> <Core = "Double2Float">   --->   Core 122 'Double2Float' <Latency = 0> <II = 1> <Delay = 6.40> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 78 <SV = 65> <Delay = 3.25>
+ST_78 : Operation 297 [1/1] (3.25ns)   --->   "store float %tmp_10, float* %h1_addr_1, align 4" [hand_chrc_nn.cpp:39]   --->   Operation 297 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_78 : Operation 298 [1/1] (0.00ns)   --->   "br label %.preheader8" [hand_chrc_nn.cpp:33]   --->   Operation 298 'br' <Predicate = true> <Delay = 0.00>
+
+State 79 <SV = 6> <Delay = 2.13>
+ST_79 : Operation 299 [1/1] (0.00ns)   --->   "%num = phi i32 [ %num_1, %._crit_edge ], [ 0, %.preheader.preheader ]"   --->   Operation 299 'phi' 'num' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 300 [1/1] (0.00ns)   --->   "%num_2 = phi i5 [ %i_2, %._crit_edge ], [ 0, %.preheader.preheader ]"   --->   Operation 300 'phi' 'num_2' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 301 [1/1] (0.00ns)   --->   "%mm = phi float [ %mm_1, %._crit_edge ], [ -1.000000e+01, %.preheader.preheader ]"   --->   Operation 301 'phi' 'mm' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 302 [1/1] (0.00ns)   --->   "%phi_mul3 = phi i12 [ %next_mul4, %._crit_edge ], [ 0, %.preheader.preheader ]"   --->   Operation 302 'phi' 'phi_mul3' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 303 [1/1] (2.13ns)   --->   "%next_mul4 = add i12 %phi_mul3, 100"   --->   Operation 303 'add' 'next_mul4' <Predicate = true> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 304 [1/1] (0.00ns)   --->   "%num_2_cast2 = zext i5 %num_2 to i32" [hand_chrc_nn.cpp:52]   --->   Operation 304 'zext' 'num_2_cast2' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 305 [1/1] (1.44ns)   --->   "%exitcond1 = icmp eq i5 %num_2, -6" [hand_chrc_nn.cpp:52]   --->   Operation 305 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 306 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26) nounwind"   --->   Operation 306 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 307 [1/1] (1.86ns)   --->   "%i_2 = add i5 %num_2, 1" [hand_chrc_nn.cpp:52]   --->   Operation 307 'add' 'i_2' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 308 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %5, label %.preheader5.preheader" [hand_chrc_nn.cpp:52]   --->   Operation 308 'br' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 309 [1/1] (1.66ns)   --->   "br label %.preheader5" [hand_chrc_nn.cpp:55]   --->   Operation 309 'br' <Predicate = (!exitcond1)> <Delay = 1.66>
+ST_79 : Operation 310 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %num to i8" [hand_chrc_nn.cpp:68]   --->   Operation 310 'trunc' 'tmp' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_79 : Operation 311 [1/1] (2.11ns)   --->   "%tmp_14 = add i8 65, %tmp" [hand_chrc_nn.cpp:68]   --->   Operation 311 'add' 'tmp_14' <Predicate = (exitcond1)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 312 [1/1] (0.00ns)   --->   "ret i8 %tmp_14" [hand_chrc_nn.cpp:68]   --->   Operation 312 'ret' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 80 <SV = 7> <Delay = 6.61>
+ST_80 : Operation 313 [1/1] (0.00ns)   --->   "%tmp_16 = phi float [ %tmp_26, %4 ], [ 0.000000e+00, %.preheader5.preheader ]" [hand_chrc_nn.cpp:57]   --->   Operation 313 'phi' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 314 [1/1] (0.00ns)   --->   "%j_1 = phi i7 [ %j_3, %4 ], [ 0, %.preheader5.preheader ]"   --->   Operation 314 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 315 [1/1] (1.46ns)   --->   "%exitcond = icmp eq i7 %j_1, -28" [hand_chrc_nn.cpp:55]   --->   Operation 315 'icmp' 'exitcond' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 316 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind"   --->   Operation 316 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 317 [1/1] (2.03ns)   --->   "%j_3 = add i7 %j_1, 1" [hand_chrc_nn.cpp:55]   --->   Operation 317 'add' 'j_3' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 318 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %._crit_edge, label %4" [hand_chrc_nn.cpp:55]   --->   Operation 318 'br' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 319 [1/1] (0.00ns)   --->   "%tmp_24 = zext i7 %j_1 to i64" [hand_chrc_nn.cpp:57]   --->   Operation 319 'zext' 'tmp_24' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_80 : Operation 320 [1/1] (0.00ns)   --->   "%tmp_24_cast = zext i7 %j_1 to i12" [hand_chrc_nn.cpp:57]   --->   Operation 320 'zext' 'tmp_24_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_80 : Operation 321 [1/1] (2.13ns)   --->   "%tmp_34 = add i12 %phi_mul3, %tmp_24_cast" [hand_chrc_nn.cpp:57]   --->   Operation 321 'add' 'tmp_34' <Predicate = (!exitcond)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 322 [1/1] (0.00ns)   --->   "%tmp_40_cast = zext i12 %tmp_34 to i64" [hand_chrc_nn.cpp:57]   --->   Operation 322 'zext' 'tmp_40_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_80 : Operation 323 [1/1] (0.00ns)   --->   "%lay21_addr = getelementptr [2600 x float]* @lay21, i64 0, i64 %tmp_40_cast" [hand_chrc_nn.cpp:57]   --->   Operation 323 'getelementptr' 'lay21_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_80 : Operation 324 [1/1] (0.00ns)   --->   "%h1_addr_2 = getelementptr inbounds [100 x float]* %h1, i64 0, i64 %tmp_24" [hand_chrc_nn.cpp:57]   --->   Operation 324 'getelementptr' 'h1_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_80 : Operation 325 [2/2] (3.25ns)   --->   "%h1_load_2 = load float* %h1_addr_2, align 4" [hand_chrc_nn.cpp:57]   --->   Operation 325 'load' 'h1_load_2' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_80 : Operation 326 [2/2] (3.25ns)   --->   "%lay21_load = load float* %lay21_addr, align 4" [hand_chrc_nn.cpp:57]   --->   Operation 326 'load' 'lay21_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2600> <ROM>
+ST_80 : Operation 327 [1/1] (0.00ns)   --->   "%tmp_19_to_int = bitcast float %tmp_16 to i32" [hand_chrc_nn.cpp:59]   --->   Operation 327 'bitcast' 'tmp_19_to_int' <Predicate = (exitcond)> <Delay = 0.00>
+ST_80 : Operation 328 [1/1] (1.26ns)   --->   "%tmp_19_neg = xor i32 %tmp_19_to_int, -2147483648" [hand_chrc_nn.cpp:59]   --->   Operation 328 'xor' 'tmp_19_neg' <Predicate = (exitcond)> <Delay = 1.26> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 329 [1/1] (0.00ns)   --->   "%tmp_17 = bitcast i32 %tmp_19_neg to float" [hand_chrc_nn.cpp:59]   --->   Operation 329 'bitcast' 'tmp_17' <Predicate = (exitcond)> <Delay = 0.00>
+ST_80 : Operation 330 [1/1] (5.34ns)   --->   "%tmp_18 = fpext float %tmp_17 to double" [hand_chrc_nn.cpp:59]   --->   Operation 330 'fpext' 'tmp_18' <Predicate = (exitcond)> <Delay = 5.34> <Core = "Float2Double">   --->   Core 113 'Float2Double' <Latency = 0> <II = 1> <Delay = 5.34> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 81 <SV = 8> <Delay = 3.25>
+ST_81 : Operation 331 [1/2] (3.25ns)   --->   "%h1_load_2 = load float* %h1_addr_2, align 4" [hand_chrc_nn.cpp:57]   --->   Operation 331 'load' 'h1_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_81 : Operation 332 [1/2] (3.25ns)   --->   "%lay21_load = load float* %lay21_addr, align 4" [hand_chrc_nn.cpp:57]   --->   Operation 332 'load' 'lay21_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2600> <ROM>
+
+State 82 <SV = 9> <Delay = 5.64>
+ST_82 : Operation 333 [4/4] (5.64ns)   --->   "%tmp_25 = fmul float %h1_load_2, %lay21_load" [hand_chrc_nn.cpp:57]   --->   Operation 333 'fmul' 'tmp_25' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 10> <Delay = 5.64>
+ST_83 : Operation 334 [3/4] (5.64ns)   --->   "%tmp_25 = fmul float %h1_load_2, %lay21_load" [hand_chrc_nn.cpp:57]   --->   Operation 334 'fmul' 'tmp_25' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 11> <Delay = 5.64>
+ST_84 : Operation 335 [2/4] (5.64ns)   --->   "%tmp_25 = fmul float %h1_load_2, %lay21_load" [hand_chrc_nn.cpp:57]   --->   Operation 335 'fmul' 'tmp_25' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 12> <Delay = 5.64>
+ST_85 : Operation 336 [1/4] (5.64ns)   --->   "%tmp_25 = fmul float %h1_load_2, %lay21_load" [hand_chrc_nn.cpp:57]   --->   Operation 336 'fmul' 'tmp_25' <Predicate = true> <Delay = 5.64> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.64> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 13> <Delay = 7.17>
+ST_86 : Operation 337 [5/5] (7.17ns)   --->   "%tmp_26 = fadd float %tmp_16, %tmp_25" [hand_chrc_nn.cpp:57]   --->   Operation 337 'fadd' 'tmp_26' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 14> <Delay = 7.17>
+ST_87 : Operation 338 [4/5] (7.17ns)   --->   "%tmp_26 = fadd float %tmp_16, %tmp_25" [hand_chrc_nn.cpp:57]   --->   Operation 338 'fadd' 'tmp_26' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 15> <Delay = 7.17>
+ST_88 : Operation 339 [3/5] (7.17ns)   --->   "%tmp_26 = fadd float %tmp_16, %tmp_25" [hand_chrc_nn.cpp:57]   --->   Operation 339 'fadd' 'tmp_26' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 16> <Delay = 7.17>
+ST_89 : Operation 340 [2/5] (7.17ns)   --->   "%tmp_26 = fadd float %tmp_16, %tmp_25" [hand_chrc_nn.cpp:57]   --->   Operation 340 'fadd' 'tmp_26' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 90 <SV = 17> <Delay = 7.17>
+ST_90 : Operation 341 [1/5] (7.17ns)   --->   "%tmp_26 = fadd float %tmp_16, %tmp_25" [hand_chrc_nn.cpp:57]   --->   Operation 341 'fadd' 'tmp_26' <Predicate = true> <Delay = 7.17> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.17> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 342 [1/1] (0.00ns)   --->   "br label %.preheader5" [hand_chrc_nn.cpp:55]   --->   Operation 342 'br' <Predicate = true> <Delay = 0.00>
+
+State 91 <SV = 8> <Delay = 7.32>
+ST_91 : Operation 343 [18/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 343 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 92 <SV = 9> <Delay = 7.32>
+ST_92 : Operation 344 [17/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 344 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 93 <SV = 10> <Delay = 7.32>
+ST_93 : Operation 345 [16/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 345 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 94 <SV = 11> <Delay = 7.32>
+ST_94 : Operation 346 [15/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 346 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 95 <SV = 12> <Delay = 7.32>
+ST_95 : Operation 347 [14/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 347 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 96 <SV = 13> <Delay = 7.32>
+ST_96 : Operation 348 [13/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 348 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 97 <SV = 14> <Delay = 7.32>
+ST_97 : Operation 349 [12/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 349 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 98 <SV = 15> <Delay = 7.32>
+ST_98 : Operation 350 [11/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 350 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 99 <SV = 16> <Delay = 7.32>
+ST_99 : Operation 351 [10/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 351 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 100 <SV = 17> <Delay = 7.32>
+ST_100 : Operation 352 [9/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 352 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 101 <SV = 18> <Delay = 7.32>
+ST_101 : Operation 353 [8/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 353 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 102 <SV = 19> <Delay = 7.32>
+ST_102 : Operation 354 [7/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 354 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 103 <SV = 20> <Delay = 7.32>
+ST_103 : Operation 355 [6/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 355 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 104 <SV = 21> <Delay = 7.32>
+ST_104 : Operation 356 [5/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 356 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 105 <SV = 22> <Delay = 7.32>
+ST_105 : Operation 357 [4/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 357 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 106 <SV = 23> <Delay = 7.32>
+ST_106 : Operation 358 [3/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 358 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 107 <SV = 24> <Delay = 7.32>
+ST_107 : Operation 359 [2/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 359 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 108 <SV = 25> <Delay = 7.32>
+ST_108 : Operation 360 [1/18] (7.32ns)   --->   "%tmp_19 = call double @llvm.exp.f64(double %tmp_18)" [hand_chrc_nn.cpp:59]   --->   Operation 360 'dexp' 'tmp_19' <Predicate = true> <Delay = 7.32> <Core = "DExp">   --->   Core 127 'DExp' <Latency = 17> <II = 1> <Delay = 7.32> <FuncUnit> <Opcode : 'dexp'> <InPorts = 1> <OutPorts = 1>
+
+State 109 <SV = 26> <Delay = 8.37>
+ST_109 : Operation 361 [6/6] (8.37ns)   --->   "%tmp_20 = fadd double %tmp_19, 1.000000e+00" [hand_chrc_nn.cpp:59]   --->   Operation 361 'dadd' 'tmp_20' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 110 <SV = 27> <Delay = 8.37>
+ST_110 : Operation 362 [5/6] (8.37ns)   --->   "%tmp_20 = fadd double %tmp_19, 1.000000e+00" [hand_chrc_nn.cpp:59]   --->   Operation 362 'dadd' 'tmp_20' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 111 <SV = 28> <Delay = 8.37>
+ST_111 : Operation 363 [4/6] (8.37ns)   --->   "%tmp_20 = fadd double %tmp_19, 1.000000e+00" [hand_chrc_nn.cpp:59]   --->   Operation 363 'dadd' 'tmp_20' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 112 <SV = 29> <Delay = 8.37>
+ST_112 : Operation 364 [3/6] (8.37ns)   --->   "%tmp_20 = fadd double %tmp_19, 1.000000e+00" [hand_chrc_nn.cpp:59]   --->   Operation 364 'dadd' 'tmp_20' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 113 <SV = 30> <Delay = 8.37>
+ST_113 : Operation 365 [2/6] (8.37ns)   --->   "%tmp_20 = fadd double %tmp_19, 1.000000e+00" [hand_chrc_nn.cpp:59]   --->   Operation 365 'dadd' 'tmp_20' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 114 <SV = 31> <Delay = 8.37>
+ST_114 : Operation 366 [1/6] (8.37ns)   --->   "%tmp_20 = fadd double %tmp_19, 1.000000e+00" [hand_chrc_nn.cpp:59]   --->   Operation 366 'dadd' 'tmp_20' <Predicate = true> <Delay = 8.37> <Core = "DAddSub">   --->   Core 114 'DAddSub' <Latency = 5> <II = 1> <Delay = 8.37> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 115 <SV = 32> <Delay = 8.45>
+ST_115 : Operation 367 [31/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 367 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 116 <SV = 33> <Delay = 8.45>
+ST_116 : Operation 368 [30/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 368 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 117 <SV = 34> <Delay = 8.45>
+ST_117 : Operation 369 [29/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 369 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 118 <SV = 35> <Delay = 8.45>
+ST_118 : Operation 370 [28/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 370 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 119 <SV = 36> <Delay = 8.45>
+ST_119 : Operation 371 [27/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 371 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 120 <SV = 37> <Delay = 8.45>
+ST_120 : Operation 372 [26/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 372 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 121 <SV = 38> <Delay = 8.45>
+ST_121 : Operation 373 [25/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 373 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 122 <SV = 39> <Delay = 8.45>
+ST_122 : Operation 374 [24/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 374 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 123 <SV = 40> <Delay = 8.45>
+ST_123 : Operation 375 [23/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 375 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 124 <SV = 41> <Delay = 8.45>
+ST_124 : Operation 376 [22/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 376 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 125 <SV = 42> <Delay = 8.45>
+ST_125 : Operation 377 [21/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 377 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 126 <SV = 43> <Delay = 8.45>
+ST_126 : Operation 378 [20/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 378 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 127 <SV = 44> <Delay = 8.45>
+ST_127 : Operation 379 [19/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 379 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 128 <SV = 45> <Delay = 8.45>
+ST_128 : Operation 380 [18/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 380 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 129 <SV = 46> <Delay = 8.45>
+ST_129 : Operation 381 [17/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 381 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 130 <SV = 47> <Delay = 8.45>
+ST_130 : Operation 382 [16/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 382 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 131 <SV = 48> <Delay = 8.45>
+ST_131 : Operation 383 [15/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 383 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 132 <SV = 49> <Delay = 8.45>
+ST_132 : Operation 384 [14/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 384 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 133 <SV = 50> <Delay = 8.45>
+ST_133 : Operation 385 [13/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 385 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 134 <SV = 51> <Delay = 8.45>
+ST_134 : Operation 386 [12/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 386 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 135 <SV = 52> <Delay = 8.45>
+ST_135 : Operation 387 [11/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 387 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 136 <SV = 53> <Delay = 8.45>
+ST_136 : Operation 388 [10/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 388 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 137 <SV = 54> <Delay = 8.45>
+ST_137 : Operation 389 [9/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 389 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 138 <SV = 55> <Delay = 8.45>
+ST_138 : Operation 390 [8/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 390 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 139 <SV = 56> <Delay = 8.45>
+ST_139 : Operation 391 [7/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 391 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 140 <SV = 57> <Delay = 8.45>
+ST_140 : Operation 392 [6/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 392 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 141 <SV = 58> <Delay = 8.45>
+ST_141 : Operation 393 [5/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 393 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 142 <SV = 59> <Delay = 8.45>
+ST_142 : Operation 394 [4/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 394 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 143 <SV = 60> <Delay = 8.45>
+ST_143 : Operation 395 [3/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 395 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 144 <SV = 61> <Delay = 8.45>
+ST_144 : Operation 396 [2/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 396 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 145 <SV = 62> <Delay = 8.45>
+ST_145 : Operation 397 [1/31] (8.45ns)   --->   "%tmp_21 = fdiv double 1.000000e+00, %tmp_20" [hand_chrc_nn.cpp:59]   --->   Operation 397 'ddiv' 'tmp_21' <Predicate = true> <Delay = 8.45> <Core = "DDiv">   --->   Core 116 'DDiv' <Latency = 30> <II = 1> <Delay = 8.45> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 146 <SV = 63> <Delay = 6.40>
+ST_146 : Operation 398 [1/1] (6.40ns)   --->   "%mm_2 = fptrunc double %tmp_21 to float" [hand_chrc_nn.cpp:59]   --->   Operation 398 'fptrunc' 'mm_2' <Predicate = true> <Delay = 6.40> <Core = "Double2Float">   --->   Core 122 'Double2Float' <Latency = 0> <II = 1> <Delay = 6.40> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 147 <SV = 64> <Delay = 6.61>
+ST_147 : Operation 399 [1/1] (6.61ns)   --->   "%tmp_32 = fcmp ogt float %mm_2, %mm" [hand_chrc_nn.cpp:61]   --->   Operation 399 'fcmp' 'tmp_32' <Predicate = true> <Delay = 6.61> <Core = "FCmp">   --->   Core 110 'FCmp' <Latency = 0> <II = 1> <Delay = 6.61> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 148 <SV = 65> <Delay = 4.71>
+ST_148 : Operation 400 [1/1] (0.00ns)   --->   "%mm_2_to_int = bitcast float %mm_2 to i32" [hand_chrc_nn.cpp:61]   --->   Operation 400 'bitcast' 'mm_2_to_int' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 401 [1/1] (0.00ns)   --->   "%tmp_22 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %mm_2_to_int, i32 23, i32 30)" [hand_chrc_nn.cpp:61]   --->   Operation 401 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 402 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i32 %mm_2_to_int to i23" [hand_chrc_nn.cpp:61]   --->   Operation 402 'trunc' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 403 [1/1] (0.00ns)   --->   "%mm_to_int = bitcast float %mm to i32" [hand_chrc_nn.cpp:61]   --->   Operation 403 'bitcast' 'mm_to_int' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 404 [1/1] (0.00ns)   --->   "%tmp_27 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %mm_to_int, i32 23, i32 30)" [hand_chrc_nn.cpp:61]   --->   Operation 404 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 405 [1/1] (0.00ns)   --->   "%tmp_28 = trunc i32 %mm_to_int to i23" [hand_chrc_nn.cpp:61]   --->   Operation 405 'trunc' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 406 [1/1] (1.47ns)   --->   "%notlhs = icmp ne i8 %tmp_22, -1" [hand_chrc_nn.cpp:61]   --->   Operation 406 'icmp' 'notlhs' <Predicate = true> <Delay = 1.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 407 [1/1] (2.40ns)   --->   "%notrhs = icmp eq i23 %tmp_23, 0" [hand_chrc_nn.cpp:61]   --->   Operation 407 'icmp' 'notrhs' <Predicate = true> <Delay = 2.40> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 408 [1/1] (0.00ns) (grouped into LUT with out node tmp_33)   --->   "%tmp_29 = or i1 %notrhs, %notlhs" [hand_chrc_nn.cpp:61]   --->   Operation 408 'or' 'tmp_29' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 409 [1/1] (1.47ns)   --->   "%notlhs8 = icmp ne i8 %tmp_27, -1" [hand_chrc_nn.cpp:61]   --->   Operation 409 'icmp' 'notlhs8' <Predicate = true> <Delay = 1.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 410 [1/1] (2.40ns)   --->   "%notrhs9 = icmp eq i23 %tmp_28, 0" [hand_chrc_nn.cpp:61]   --->   Operation 410 'icmp' 'notrhs9' <Predicate = true> <Delay = 2.40> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 411 [1/1] (0.00ns) (grouped into LUT with out node tmp_33)   --->   "%tmp_30 = or i1 %notrhs9, %notlhs8" [hand_chrc_nn.cpp:61]   --->   Operation 411 'or' 'tmp_30' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 412 [1/1] (0.00ns) (grouped into LUT with out node tmp_33)   --->   "%tmp_31 = and i1 %tmp_29, %tmp_30" [hand_chrc_nn.cpp:61]   --->   Operation 412 'and' 'tmp_31' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 413 [1/1] (0.94ns) (out node of the LUT)   --->   "%tmp_33 = and i1 %tmp_31, %tmp_32" [hand_chrc_nn.cpp:61]   --->   Operation 413 'and' 'tmp_33' <Predicate = true> <Delay = 0.94> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 414 [1/1] (1.37ns)   --->   "%num_1 = select i1 %tmp_33, i32 %num_2_cast2, i32 %num" [hand_chrc_nn.cpp:61]   --->   Operation 414 'select' 'num_1' <Predicate = true> <Delay = 1.37> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_148 : Operation 415 [1/1] (1.37ns)   --->   "%mm_1 = select i1 %tmp_33, float %mm_2, float %mm" [hand_chrc_nn.cpp:61]   --->   Operation 415 'select' 'mm_1' <Predicate = true> <Delay = 1.37> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_148 : Operation 416 [1/1] (0.00ns)   --->   "br label %.preheader" [hand_chrc_nn.cpp:52]   --->   Operation 416 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('invdar', hand_chrc_nn.cpp:18) with incoming values : ('indvarinc', hand_chrc_nn.cpp:18) [17]  (1.66 ns)
+
+ <State 2>: 2.18ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [18]  (0 ns)
+	'add' operation ('next_mul') [19]  (2.18 ns)
+
+ <State 3>: 5.44ns
+The critical path consists of the following:
+	'phi' operation ('invdar1', hand_chrc_nn.cpp:18) with incoming values : ('indvarinc1', hand_chrc_nn.cpp:18) [24]  (0 ns)
+	'add' operation ('tmp_1', hand_chrc_nn.cpp:18) [27]  (2.18 ns)
+	'getelementptr' operation ('hand_chrc_nn_float_1', hand_chrc_nn.cpp:18) [29]  (0 ns)
+	'load' operation ('hand_chrc_nn_float_2', hand_chrc_nn.cpp:18) on array 'hand_mulchrc_nn_float_s' [31]  (3.26 ns)
+
+ <State 4>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('hand_chrc_nn_float_2', hand_chrc_nn.cpp:18) on array 'hand_mulchrc_nn_float_s' [31]  (3.26 ns)
+	'store' operation (hand_chrc_nn.cpp:18) of variable 'hand_chrc_nn_float_2', hand_chrc_nn.cpp:18 on array 'lay1', hand_chrc_nn.cpp:18 [32]  (3.26 ns)
+
+ <State 5>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', hand_chrc_nn.cpp:26) [44]  (0 ns)
+	'getelementptr' operation ('bias1_0_addr', hand_chrc_nn.cpp:28) [51]  (0 ns)
+	'load' operation ('bias1_0_load', hand_chrc_nn.cpp:28) on array 'bias1_0' [52]  (3.26 ns)
+
+ <State 6>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('bias1_0_load', hand_chrc_nn.cpp:28) on array 'bias1_0' [52]  (3.26 ns)
+	'store' operation (hand_chrc_nn.cpp:28) of variable 'bias1_0_load', hand_chrc_nn.cpp:28 on array 'h1', hand_chrc_nn.cpp:24 [54]  (3.26 ns)
+
+ <State 7>: 2.18ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul1') with incoming values : ('next_mul2') [60]  (0 ns)
+	'add' operation ('next_mul2') [61]  (2.18 ns)
+
+ <State 8>: 5.44ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', hand_chrc_nn.cpp:35) [71]  (0 ns)
+	'add' operation ('tmp_15', hand_chrc_nn.cpp:37) [79]  (2.18 ns)
+	'getelementptr' operation ('lay1_addr_1', hand_chrc_nn.cpp:37) [81]  (0 ns)
+	'load' operation ('lay1_load', hand_chrc_nn.cpp:37) on array 'lay1', hand_chrc_nn.cpp:18 [84]  (3.26 ns)
+
+ <State 9>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('X_load', hand_chrc_nn.cpp:37) on array 'X' [83]  (3.26 ns)
+
+ <State 10>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', hand_chrc_nn.cpp:37) [85]  (5.64 ns)
+
+ <State 11>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', hand_chrc_nn.cpp:37) [85]  (5.64 ns)
+
+ <State 12>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', hand_chrc_nn.cpp:37) [85]  (5.64 ns)
+
+ <State 13>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', hand_chrc_nn.cpp:37) [85]  (5.64 ns)
+
+ <State 14>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', hand_chrc_nn.cpp:37) [87]  (7.18 ns)
+
+ <State 15>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', hand_chrc_nn.cpp:37) [87]  (7.18 ns)
+
+ <State 16>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', hand_chrc_nn.cpp:37) [87]  (7.18 ns)
+
+ <State 17>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', hand_chrc_nn.cpp:37) [87]  (7.18 ns)
+
+ <State 18>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', hand_chrc_nn.cpp:37) [87]  (7.18 ns)
+
+ <State 19>: 3.26ns
+The critical path consists of the following:
+	'store' operation (hand_chrc_nn.cpp:37) of variable 'tmp_13', hand_chrc_nn.cpp:37 on array 'h1', hand_chrc_nn.cpp:24 [88]  (3.26 ns)
+
+ <State 20>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('h1_load', hand_chrc_nn.cpp:39) on array 'h1', hand_chrc_nn.cpp:24 [91]  (3.26 ns)
+
+ <State 21>: 6.62ns
+The critical path consists of the following:
+	'xor' operation ('tmp_9_neg', hand_chrc_nn.cpp:39) [93]  (1.27 ns)
+	'fpext' operation ('tmp_s', hand_chrc_nn.cpp:39) [95]  (5.35 ns)
+
+ <State 22>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 23>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 24>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 25>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 26>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 27>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 28>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 29>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 30>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 31>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 32>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 33>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 34>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 35>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 36>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 37>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 38>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 39>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_5', hand_chrc_nn.cpp:39) [96]  (7.32 ns)
+
+ <State 40>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_8', hand_chrc_nn.cpp:39) [97]  (8.37 ns)
+
+ <State 41>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_8', hand_chrc_nn.cpp:39) [97]  (8.37 ns)
+
+ <State 42>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_8', hand_chrc_nn.cpp:39) [97]  (8.37 ns)
+
+ <State 43>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_8', hand_chrc_nn.cpp:39) [97]  (8.37 ns)
+
+ <State 44>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_8', hand_chrc_nn.cpp:39) [97]  (8.37 ns)
+
+ <State 45>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_8', hand_chrc_nn.cpp:39) [97]  (8.37 ns)
+
+ <State 46>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 47>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 48>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 49>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 50>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 51>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 52>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 53>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 54>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 55>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 56>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 57>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 58>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 59>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 60>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 61>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 62>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 63>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 64>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 65>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 66>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 67>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 68>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 69>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 70>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 71>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 72>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 73>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 74>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 75>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 76>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_7', hand_chrc_nn.cpp:39) [98]  (8.45 ns)
+
+ <State 77>: 6.4ns
+The critical path consists of the following:
+	'fptrunc' operation ('tmp_10', hand_chrc_nn.cpp:39) [99]  (6.4 ns)
+
+ <State 78>: 3.26ns
+The critical path consists of the following:
+	'store' operation (hand_chrc_nn.cpp:39) of variable 'tmp_10', hand_chrc_nn.cpp:39 on array 'h1', hand_chrc_nn.cpp:24 [100]  (3.26 ns)
+
+ <State 79>: 2.13ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul3') with incoming values : ('next_mul4') [108]  (0 ns)
+	'add' operation ('next_mul4') [109]  (2.13 ns)
+
+ <State 80>: 6.62ns
+The critical path consists of the following:
+	'phi' operation ('tmp_16', hand_chrc_nn.cpp:57) with incoming values : ('tmp_26', hand_chrc_nn.cpp:57) [118]  (0 ns)
+	'xor' operation ('tmp_19_neg', hand_chrc_nn.cpp:59) [138]  (1.27 ns)
+	'fpext' operation ('tmp_18', hand_chrc_nn.cpp:59) [140]  (5.35 ns)
+
+ <State 81>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('h1_load_2', hand_chrc_nn.cpp:57) on array 'h1', hand_chrc_nn.cpp:24 [131]  (3.26 ns)
+
+ <State 82>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', hand_chrc_nn.cpp:57) [133]  (5.64 ns)
+
+ <State 83>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', hand_chrc_nn.cpp:57) [133]  (5.64 ns)
+
+ <State 84>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', hand_chrc_nn.cpp:57) [133]  (5.64 ns)
+
+ <State 85>: 5.64ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', hand_chrc_nn.cpp:57) [133]  (5.64 ns)
+
+ <State 86>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_26', hand_chrc_nn.cpp:57) [134]  (7.18 ns)
+
+ <State 87>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_26', hand_chrc_nn.cpp:57) [134]  (7.18 ns)
+
+ <State 88>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_26', hand_chrc_nn.cpp:57) [134]  (7.18 ns)
+
+ <State 89>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_26', hand_chrc_nn.cpp:57) [134]  (7.18 ns)
+
+ <State 90>: 7.18ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_26', hand_chrc_nn.cpp:57) [134]  (7.18 ns)
+
+ <State 91>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 92>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 93>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 94>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 95>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 96>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 97>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 98>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 99>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 100>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 101>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 102>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 103>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 104>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 105>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 106>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 107>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 108>: 7.32ns
+The critical path consists of the following:
+	'dexp' operation ('tmp_19', hand_chrc_nn.cpp:59) [141]  (7.32 ns)
+
+ <State 109>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', hand_chrc_nn.cpp:59) [142]  (8.37 ns)
+
+ <State 110>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', hand_chrc_nn.cpp:59) [142]  (8.37 ns)
+
+ <State 111>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', hand_chrc_nn.cpp:59) [142]  (8.37 ns)
+
+ <State 112>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', hand_chrc_nn.cpp:59) [142]  (8.37 ns)
+
+ <State 113>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', hand_chrc_nn.cpp:59) [142]  (8.37 ns)
+
+ <State 114>: 8.37ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_20', hand_chrc_nn.cpp:59) [142]  (8.37 ns)
+
+ <State 115>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 116>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 117>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 118>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 119>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 120>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 121>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 122>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 123>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 124>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 125>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 126>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 127>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 128>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 129>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 130>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 131>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 132>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 133>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 134>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 135>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 136>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 137>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 138>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 139>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 140>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 141>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 142>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 143>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 144>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 145>: 8.45ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_21', hand_chrc_nn.cpp:59) [143]  (8.45 ns)
+
+ <State 146>: 6.4ns
+The critical path consists of the following:
+	'fptrunc' operation ('mm', hand_chrc_nn.cpp:59) [144]  (6.4 ns)
+
+ <State 147>: 6.62ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_32', hand_chrc_nn.cpp:61) [158]  (6.62 ns)
+
+ <State 148>: 4.72ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs', hand_chrc_nn.cpp:61) [152]  (2.41 ns)
+	'or' operation ('tmp_29', hand_chrc_nn.cpp:61) [153]  (0 ns)
+	'and' operation ('tmp_31', hand_chrc_nn.cpp:61) [157]  (0 ns)
+	'and' operation ('tmp_33', hand_chrc_nn.cpp:61) [159]  (0.942 ns)
+	'select' operation ('num', hand_chrc_nn.cpp:61) [160]  (1.37 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

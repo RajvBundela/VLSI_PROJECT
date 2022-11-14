@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName hand_chrc_nn.cpp_pre.cpp.tb.cpp

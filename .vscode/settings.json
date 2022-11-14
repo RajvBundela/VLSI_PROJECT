@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp"
+    },
+    "editor.maxTokenizationLineLength": 20000000000
+}

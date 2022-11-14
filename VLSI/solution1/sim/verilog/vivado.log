@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Nov 13 23:43:58 2022
+# Process ID: 784
+# Current directory: C:/Users/91917/Downloads/VLSI_Project/vlsi_project/VLSI/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/91917/Downloads/VLSI_Project/vlsi_project/VLSI/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/91917/Downloads/VLSI_Project/vlsi_project/VLSI/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+current_fileset: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 733.570 ; gain = 126.344
+# open_wave_database hand_chrc_nn.wdb
+ERROR: [Simtcl 6-118] Unable to locate wdb file 'hand_chrc_nn.wdb'
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 13 23:44:44 2022...

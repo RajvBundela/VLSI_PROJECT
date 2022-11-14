@@ -1,0 +1,4 @@
+Running: xsim.dir/hand_chrc_nn/xsimk.exe -simmode gui -wdb hand_chrc_nn.wdb -simrunnum 0 -socket 58069
+Design successfully loaded
+Design Loading Memory Usage: 21160 KB (Peak: 21160 KB)
+Design Loading CPU Usage: 46 ms

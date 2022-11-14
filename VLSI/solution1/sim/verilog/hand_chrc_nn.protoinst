@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"hand_chrc_nn": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'hand_chrc_nn'" level="0">
+<item name = "Date">Sun Nov 13 22:58:29 2022
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">VLSI</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">aartix7</item>
+<item name = "Target device">xa7a12tcsg325-1q</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.451, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1134163, 1134163, 1134163, 1134163, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- memcpy_lay1">156899, 156899, 1569, -, -, 100, no</column>
+<column name=" + memcpy_lay1">1567, 1567, 2, -, -, 784, no</column>
+<column name="- Loop 2">200, 200, 2, -, -, 100, no</column>
+<column name="- Loop 3">946900, 946900, 9469, -, -, 100, no</column>
+<column name=" + Loop 3.1">9408, 9408, 12, -, -, 784, no</column>
+<column name="- Loop 4">30160, 30160, 1160, -, -, 26, no</column>
+<column name=" + Loop 4.1">1100, 1100, 11, -, -, 100, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="hand_chrc_nn.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_hand_chrc_nn_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">y__return__return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/interrupt" type="logic">
+               <obj_property name="ElementShortName">interrupt</obj_property>
+               <obj_property name="ObjectShortName">interrupt</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_BRESP" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_BREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_BVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_RRESP" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_RDATA" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_RREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_RVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_ARREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_ARVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_ARADDR" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_WSTRB" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_WDATA" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_WREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_WVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_AWREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_AWVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/s_axi_CRTL_BUS_AWADDR" type="array">
+               <obj_property name="ElementShortName">s_axi_CRTL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CRTL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group22" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group23" type="group">
+            <obj_property name="label">X(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_Rst_A" type="logic">
+               <obj_property name="ElementShortName">X_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">X_Rst_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_Clk_A" type="logic">
+               <obj_property name="ElementShortName">X_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">X_Clk_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_Dout_A" type="array">
+               <obj_property name="ElementShortName">X_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">X_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_Din_A" type="array">
+               <obj_property name="ElementShortName">X_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">X_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_WEN_A" type="array">
+               <obj_property name="ElementShortName">X_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">X_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_EN_A" type="logic">
+               <obj_property name="ElementShortName">X_EN_A</obj_property>
+               <obj_property name="ObjectShortName">X_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/X_Addr_A" type="array">
+               <obj_property name="ElementShortName">X_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">X_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group31" type="group">
+         <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group36" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/ap_rst_n" type="logic">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group38" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_hand_chrc_nn_top/AESL_inst_hand_chrc_nn/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group40" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group41" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group42" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group43" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/LENGTH_X" type="array">
+               <obj_property name="ElementShortName">LENGTH_X[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_X[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/LENGTH_ap_return" type="array">
+               <obj_property name="ElementShortName">LENGTH_ap_return[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_ap_return[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group49" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group50" type="group">
+            <obj_property name="label">y__return__return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_INTERRUPT" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_INTERRUPT</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_INTERRUPT</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_BRESP" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_BREADY" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_BVALID" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_RRESP" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_RDATA" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_RREADY" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_RVALID" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_ARREADY" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_ARVALID" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_ARADDR" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_WSTRB" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_WDATA" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_WREADY" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_WVALID" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_AWREADY" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_AWVALID" type="logic">
+               <obj_property name="ElementShortName">CRTL_BUS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/CRTL_BUS_AWADDR" type="array">
+               <obj_property name="ElementShortName">CRTL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">CRTL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group69" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group70" type="group">
+            <obj_property name="label">X(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_RST_A" type="logic">
+               <obj_property name="ElementShortName">X_RST_A</obj_property>
+               <obj_property name="ObjectShortName">X_RST_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_CLK_A" type="logic">
+               <obj_property name="ElementShortName">X_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">X_CLK_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_DOUT_A" type="array">
+               <obj_property name="ElementShortName">X_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">X_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_DIN_A" type="array">
+               <obj_property name="ElementShortName">X_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">X_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_WEN_A" type="array">
+               <obj_property name="ElementShortName">X_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">X_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_EN_A" type="logic">
+               <obj_property name="ElementShortName">X_EN_A</obj_property>
+               <obj_property name="ObjectShortName">X_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_hand_chrc_nn_top/X_ADDR_A" type="array">
+               <obj_property name="ElementShortName">X_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">X_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

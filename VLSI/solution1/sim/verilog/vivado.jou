@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Nov 13 23:43:58 2022
+# Process ID: 784
+# Current directory: C:/Users/91917/Downloads/VLSI_Project/vlsi_project/VLSI/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/91917/Downloads/VLSI_Project/vlsi_project/VLSI/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/91917/Downloads/VLSI_Project/vlsi_project/VLSI/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
